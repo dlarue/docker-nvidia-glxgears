@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker build -t ubuntu16_04:glxgears .
+#docker run -ti -e DISPLAY=unix:0.0 -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v ~/.Xauthority:/home/meshmixer/.Xauthority  --device /dev/dri --net=host --privileged --runtime=nvidia --rm ubuntu16_04:glxgears bash
+docker run -ti -e DISPLAY=unix:0.0 -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v ~/.Xauthority:/home/meshmixer/.Xauthority  --device /dev/dri --net=host --privileged --runtime=nvidia --rm ubuntu16_04:glxgears
